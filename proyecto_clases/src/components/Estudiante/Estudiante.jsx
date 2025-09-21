@@ -1,3 +1,4 @@
+import "./Estudiante.css";
 // const estudiantes = () => {
 //     return [
 //         { id: 1, nombre: "Juan", edad: 20 },
@@ -10,13 +11,15 @@ const Estudiante = ({ estudiantes }) => {
     return (
         <>
             <h1>Lista de Estudiantes</h1>
-            {estudiantes.map((est) => (
-                <div key={est.id}>
-                    <h3>
-                        {est.nombre} - Edad: {est.edad}
-                    </h3>
-                </div>
-            ))}
+            <section className="container-estudiantes">
+                {estudiantes.map((est) => (
+                    <div className="card-estudiante" key={est.id}>
+                        <h3>
+                            {est.nombre} - Edad: {est.edad}
+                        </h3>
+                    </div>
+                ))}
+            </section>
         </>
     );
 };
