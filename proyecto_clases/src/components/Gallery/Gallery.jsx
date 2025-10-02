@@ -1,7 +1,13 @@
-import React from "react";
+import "./Gallery.css";
 
-const Gallery = () => {
-    return <div>Gallery</div>;
+const Gallery = ({ images }) => {
+    return (
+        <section>
+            {images.map((image, index) => (
+                <img key={index} src={image} alt={`Imagen ${index + 1}`} />
+            ))}
+        </section>
+    );
 };
 
 export default Gallery;

@@ -1,10 +1,12 @@
-import React from "react";
-
+import "./Footer.css";
 const Footer = () => {
-    return;
-    <>
-        <h4>Domegal.dev - Sep 2025</h4>
-    </>;
+    return (
+        <>
+            <footer>
+                <p>&copy; 2025 - Domegal.dev. </p>
+            </footer>
+        </>
+    );
 };
 
 export default Footer;

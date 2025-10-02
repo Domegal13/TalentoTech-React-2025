@@ -1,21 +1,19 @@
 import "./App.css";
-// import Boton from "./components/Boton/Boton";
-// import Estudiante from "./components/Estudiante/Estudiante";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
+import { Header } from "./components/Header/Header";
 import Main from "./components/Main/Main";
-
-// const estudiantes = [
-//     { id: 1, nombre: "Juan", edad: 20 },
-//     { id: 2, nombre: "María", edad: 22 },
-//     { id: 3, nombre: "Pedro", edad: 21 },
-// ];
+import Inicio from "./components/Inicio/Inicio";
+import Contacto from "./components/Contacto/Contacto";
 
 function App() {
     return (
         <>
-            <h1>Bienvenido a mi Aplicación</h1>
-            <p>Esta es una App de ejemplo utilizando Vite y React</p>
-            <Main />
+            <Header />
+            <Routes>
+                <Route path="/" element={<Inicio />} />
+                <Route path={"/contacto"} element={<Contacto />} />
+            </Routes>
             <Footer />
         </>
     );
